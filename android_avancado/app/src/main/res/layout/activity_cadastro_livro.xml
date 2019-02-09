@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.CadastroLivroActivity">
+
+    <EditText
+        android:id="@+id/edtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Titulo"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/edtAutor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Autor"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/edtEditora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Editora"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="Cadastrar" />
+
+</android.widget.LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="BIBLIOTECA"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:textColor="#129403"
+        android:layout_marginBottom="50dp"/>
+
+    <Button
+        android:id="@+id/btnTelaCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar livro"
+        android:layout_marginBottom="20dp"
+        android:onClick="carregarTelaCadastro"
+        android:clickable="true"
+        />
+
+    <Button
+        android:id="@+id/btnTelaListagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Listar livros"
+        android:onClick="carregarTelaListagem"
+        android:clickable="true"/>
+
+</android.widget.LinearLayout>
