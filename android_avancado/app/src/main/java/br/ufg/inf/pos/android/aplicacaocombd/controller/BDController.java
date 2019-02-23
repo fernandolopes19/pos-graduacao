@@ -33,9 +33,9 @@ public class BDController {
         db.close();
 
         if(resultado == -1){
-            return "Erro ao inserir registro";
+            return "Erro ao inserir livro";
         } else {
-            return "Registro inserido com sucesso";
+            return "Livro inserido com sucesso";
         }
     }
 
@@ -65,18 +65,36 @@ public class BDController {
         return livros;
     }
 
-
-
-    public String removerDado(String titulo){
-        ContentValues valor;
-        long resultado;
-
+    public String atualizarLivro(Livro livro){
         db = banco.getWritableDatabase();
-        valor = new ContentValues();
-        valor.remove(titulo);
 
-        //resultado = db.delete(SQLConnection.TABELA, "titulo", );
-        return null;
+        ContentValues values = new ContentValues();
+        values.put(SQLConnection.TITULO, livro.getTitulo());
+        values.put(SQLConnection.AUTOR, livro.getAutor());
+        values.put(SQLConnection.EDITORA, livro.getEditora());
+
+        int resultado = db.update(SQLConnection.TABELA, values,
+                SQLConnection.ID + " = ?", new String[]{String.valueOf(livro.getId())});
+
+        if(resultado == -1){
+            return "Erro ao atualizar o livro";
+        } else {
+            return "Livro atualizado com sucesso";
+        }
+    }
+
+
+
+    public String removerLivro(Livro livro){
+        db = banco.getWritableDatabase();
+
+        int resultado = db.delete(SQLConnection.TABELA, SQLConnection.ID + " = ?", new String[]{String.valueOf(livro.getId())});
+        String resposta;
+        if (resultado == -1){
+            return "Erro ao remover o livro";
+        } else {
+            return "Livro removido com sucesso";
+        }
     }
 
 

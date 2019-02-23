@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Livraria</string>
+    <string name="action_settings">Configuracoes</string>
+    <string name="activity_title_home">Livros</string>
+    <string name="msg_no_livros">Nenhum livro encontrado!</string>
+    <string name="lbl_new_livro_title">Novo livro</string>
+    <string name="lbl_edit_livro_title">Editar livro</string>
+    <string name="hint_enter_livro">Cadastrar livro</string>
+</resources>

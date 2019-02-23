@@ -36,6 +36,7 @@ public class CadastroLivroActivity extends AppCompatActivity {
 
                 resultado = crud.insereDado(tituloStr, autorStr, editoraStr);
                 Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
+                finish();
             }
         });
 
